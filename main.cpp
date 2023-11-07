@@ -2,7 +2,7 @@
 #include <cmath>
 
 int main() {
-    int max_valor = 100;
+    int max_valor = 50;
 
     for (int a = 1; a <= max_valor; a++) {
         for (int b = a; b <= max_valor; b++) {

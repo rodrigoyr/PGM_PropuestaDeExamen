@@ -1,23 +1,18 @@
-// Path: main.cpp
-#include <stdio.h>
-
-// Path: main.cpp
-#include <stdio.h>
-
-// Path: main.cpp
-#include <stdio.h>
+#include <iostream>
+#include <cmath>
 
 int main() {
-    int i, j, k;
+    int max_valor = 100; // Puedes ajustar el valor máximo según tus necesidades
 
-    // Paso 1: Utiliza un bucle para iterar a través de los valores de 1 a 10.
-    for (i = 1; i <= 10; i++) {
-        // Paso 2: Utiliza un segundo bucle para iterar a través de los valores de 1 a 10.
-        for (j = 1; j <= 10; j++) {
-            // Paso 3: Calcula el producto de i y j.
-            k = i * j;
+    for (int a = 1; a <= max_valor; a++) {
+        for (int b = a; b <= max_valor; b++) {
+            double c = std::sqrt(a * a + b * b);
 
-            // Paso 4: Imprime el producto.
-            printf("%d * %d = %d\n", i, j, k);
+            if (c == std::round(c) && a + b > c) {
+                std::cout << "Triple pitagórico: " << a << ", " << b << ", " << static_cast<int>(c) << std::endl;
+            }
         }
-    }       }
+    }
+
+    return 0;
+}
